@@ -10,7 +10,7 @@
 
 ## Usage
 ```bash
-npx moshimoshi
+npx moshimosh
 ```
 
 ### Whats included

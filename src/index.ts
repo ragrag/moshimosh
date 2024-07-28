@@ -1,14 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { confirm, input } from '@inquirer/prompts';
+import symphonia from '@tropicbliss/symphonia';
 import { bold, italic, magentaBright, white } from 'ansis';
-import Speaker from 'speaker';
-
-const speaker = new Speaker({
-    channels: 2,
-    bitDepth: 16,
-    sampleRate: 44100,
-});
 
 async function run() {
     const TEMPLATE_FOLDER = path.join(__dirname, '../template');
@@ -74,13 +68,14 @@ async function run() {
             fs.unlinkSync(actionUpdateDocsPath);
         }
 
-        try {
-            fs.createReadStream(path.join(SOUNDS_FOLDER, 'moshimosh.pcm')).pipe(speaker);
-        } catch (_) {}
-
         console.log('\n');
         console.log(bold(white(`≽^•༚•🎀≼ moshi${magentaBright('moshhhh!')}`)));
         console.log(white(`${italic(magentaBright(path.resolve(pkgDir)))}`));
+
+        try {
+            const buf = fs.readFileSync(path.join(SOUNDS_FOLDER, 'moshimosh.mp3'));
+            symphonia.playFromBuf(buf, { speed: 1.0, volume: 1.0, isBlocking: true });
+        } catch (_) {}
     } catch (err) {
         fs.unlinkSync(pkgDir);
         throw err;

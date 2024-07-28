@@ -1,6 +1,6 @@
 {
   "name": "moshimosh",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "ragrag https://github.com/moshimosh",
   "repository": "https://github.com/ragrag/moshimosh",
   "description": "Hybrid TypeScript Node Package Creator",
@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^5.3.2",
+    "@tropicbliss/symphonia": "^0.2.19",
     "ansis": "^3.3.2",
-    "catch-exit": "^1.2.2",
-    "speaker": "^0.5.5"
+    "catch-exit": "^1.2.2"
   }
 }

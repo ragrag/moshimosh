@@ -1,0 +1,54 @@
+{
+  "name": "add",
+  "version": "0.0.1",
+  "author": "author https://github.com/author",
+  "repository": "https://github.com/author/add",
+  "description": "description",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "add",
+    "sum"
+  ],
+  "scripts": {
+    "prepare": "tshy",
+    "test": "vitest run --coverage",
+    "docs:gen": "typedoc src/index.ts"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.14.12",
+    "@vitest/coverage-istanbul": "^2.0.4",
+    "tshy": "^3.0.2",
+    "typedoc": "^0.26.5",
+    "vitest": "^2.0.4"
+  },
+  "type": "module",
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  },
+  "main": "./dist/commonjs/index.js",
+  "types": "./dist/commonjs/index.d.ts",
+  "module": "./dist/esm/index.js"
+}

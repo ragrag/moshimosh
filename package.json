@@ -1,0 +1,37 @@
+{
+  "name": "moshimoshi",
+  "version": "0.0.1",
+  "author": "ragrag https://github.com/moshimoshi",
+  "repository": "https://github.com/ragrag/moshimoshi",
+  "description": "Hybrid TypeScript Node Package Creator",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "hybrid-package",
+    "esm",
+    "cjs",
+    "node-package"
+  ],
+  "preferGlobal": true,
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').writeFileSync('bin/index.js', '#!/usr/bin/env node\\n' + require('fs').readFileSync('bin/index.js', 'utf8'))\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "bin": {
+    "moshimoshi": "./bin/index.js"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.2",
+    "ansis": "^3.3.2"
+  }
+}

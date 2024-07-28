@@ -1,10 +1,12 @@
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/de85dba9-e275-404b-97e5-0fd08bff4c0a" alt="aimer-after-dark" height="300">
+<img src="https://github.com/user-attachments/assets/de85dba9-e275-404b-97e5-0fd08bff4c0a" alt="anya-forger" height="300">
 
 </div>
 
-## MoshiMosh - A Hybrid TypeScript Node Package Creator
+## About
+
+**moshimosh ≽^•༚•🎀≼** _(moshi-mosh)_ is a hybrid (esm/cjs) TypeScript Node package creator, with modern tooling, documentation generation and sensible defaults that just works
 
 ## Usage
 ```bash

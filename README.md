@@ -6,7 +6,7 @@
 
 ## About
 
-**moshimosh ≽^•༚•🎀≼** _(moshi-mosh)_ is a hybrid (esm/cjs) TypeScript Node package creator, with modern tooling, documentation generation and sensible defaults that just works
+**moshimosh ≽^•༚•🎀≼** _(moshi-mosh)_ is a hybrid (esm/cjs) TypeScript Node package creator, with modern tooling, typedef docs generation and sensible defaults that just works
 
 ## Usage
 ```bash

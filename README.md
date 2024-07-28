@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/1d00dcf1-f760-4741-bdfc-1af010a05b68" alt="aimer-after-dark" height="300">
+<img src="https://github.com/user-attachments/assets/de85dba9-e275-404b-97e5-0fd08bff4c0a" alt="aimer-after-dark" height="300">
 
 </div>
 
-## Hybrid TypeScript Node Package Creator
+## MoshiMosh - A Hybrid TypeScript Node Package Creator
 
 ## Usage
 ```bash

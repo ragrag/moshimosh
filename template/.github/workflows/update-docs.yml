@@ -19,7 +19,7 @@ jobs:
       - name: Checkout docs repository
         uses: actions/checkout@v2
         with:
-          repository: user/user.github.io
+          repository: <githubioStripped>
           path: docs-repo
           token: ${{ secrets.PAT }}
 

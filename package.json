@@ -1,8 +1,8 @@
 {
-  "name": "moshimoshi",
-  "version": "0.0.1",
-  "author": "ragrag https://github.com/moshimoshi",
-  "repository": "https://github.com/ragrag/moshimoshi",
+  "name": "moshimosh",
+  "version": "1.0.2",
+  "author": "ragrag https://github.com/moshimosh",
+  "repository": "https://github.com/ragrag/moshimosh",
   "description": "Hybrid TypeScript Node Package Creator",
   "engines": {
     "node": ">=18"
@@ -11,7 +11,9 @@
     "hybrid-package",
     "esm",
     "cjs",
-    "node-package"
+    "node-package",
+    "package-creator",
+    "boilerplate"
   ],
   "preferGlobal": true,
   "scripts": {
@@ -25,13 +27,16 @@
   },
   "files": [
     "bin",
+    "sounds",
     "template"
   ],
   "bin": {
-    "moshimoshi": "./bin/index.js"
+    "moshimosh": "./bin/index.js"
   },
   "dependencies": {
     "@inquirer/prompts": "^5.3.2",
-    "ansis": "^3.3.2"
+    "ansis": "^3.3.2",
+    "catch-exit": "^1.2.2",
+    "speaker": "^0.5.5"
   }
 }

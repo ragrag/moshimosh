@@ -1,9 +1,9 @@
 {
-  "name": "add",
+  "name": "<pkgName>",
   "version": "0.0.1",
-  "author": "author https://github.com/author",
-  "repository": "https://github.com/author/add",
-  "description": "description",
+  "author": "<author>",
+  "repository": "<repository>",
+  "description": "<description>",
   "engines": {
     "node": ">=18"
   },

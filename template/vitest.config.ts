@@ -2,11 +2,11 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
     test: {
-        include: ['test/**/*.{test,spec}.?(c|m)[jt]s'],
+        include: ['test/**/*.{test,spec}.ts'],
         coverage: {
             provider: 'istanbul',
             reporter: ['lcov'],
-            include: ['src/**/*.{ts,tsx}'],
+            include: ['src/**/*.ts'],
         },
     },
 });

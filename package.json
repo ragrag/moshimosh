@@ -1,6 +1,6 @@
 {
   "name": "moshimosh",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "author": "ragrag https://github.com/moshimosh",
   "repository": "https://github.com/ragrag/moshimosh",
   "description": "Hybrid TypeScript Node Package Creator",
@@ -17,12 +17,16 @@
   ],
   "preferGlobal": true,
   "scripts": {
-    "build": "tsc && node -e \"require('fs').writeFileSync('bin/index.js', '#!/usr/bin/env node\\n' + require('fs').readFileSync('bin/index.js', 'utf8'))\""
+    "build": "tsc && node -e \"require('fs').writeFileSync('bin/index.js', '#!/usr/bin/env node\\n' + require('fs').readFileSync('bin/index.js', 'utf8'))\"",
+    "githooks:install": "lefthook install",
+    "lint": "biome check --write ./src biome.json",
+    "lint:ci": "biome ci ./src biome.json"
   },
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
     "@types/node": "^20.14.12",
+    "lefthook": "^1.7.11",
     "typescript": "^5.5.4"
   },
   "files": [

@@ -1,4 +1,4 @@
-name: Build & Test
+name: Build / Lint
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  build-and-test:
+  build-lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source repository
@@ -23,3 +23,6 @@ jobs:
       
       - name: Build
         run: npm run build
+
+      - name: Lint
+        run: npm run lint:ci

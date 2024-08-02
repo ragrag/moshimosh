@@ -1,6 +1,6 @@
 {
   "name": "moshimosh",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "author": "ragrag https://github.com/moshimosh",
   "repository": "https://github.com/ragrag/moshimosh",
   "description": "Hybrid TypeScript Node Package Creator",

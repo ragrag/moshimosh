@@ -29,9 +29,12 @@ async function run() {
 
         const useGithubio = await confirm({ message: 'Github Action to add docs to GitHub Pages Repo? (requires PAT to be set in repo action secrets)' });
         if (useGithubio) {
-            githubio = await input({ message: 'Github Pages Repo (e.g https://github.com/ragrag/ragrag.github.io):', transformer: i => i.trim() });
-            githubioStripped = githubio.split('github.com/')[1] || githubio;
-            apiReferenceUrl = `${githubio}/${pkgName}`;
+            githubio = await input({
+                message: 'Github Pages Repo (e.g https://github.com/ragrag/ragrag.github.io):',
+                transformer: i => i.trim().replace(/\/$/, ''),
+            });
+            githubioStripped = githubio.split('/').at(-1) || githubio;
+            apiReferenceUrl = `[https://${githubioStripped}/${pkgName}](https://${githubioStripped}/${pkgName})`;
         }
 
         pkgDir = path.join(dir, pkgName);
@@ -62,7 +65,7 @@ async function run() {
         const actionUpdateDocsPath = path.join(pkgDir, '.github/workflows/update-docs.yml');
         if (useGithubio) {
             let actionUpdateDocs = fs.readFileSync(actionUpdateDocsPath, 'utf-8');
-            actionUpdateDocs = actionUpdateDocs.replaceAll('<githubioStripped>', githubioStripped);
+            actionUpdateDocs = actionUpdateDocs.replaceAll('<githubioStripped>', githubioStripped).replaceAll('<pkgName>', pkgName);
             fs.writeFileSync(actionUpdateDocsPath, actionUpdateDocs);
         } else {
             fs.unlinkSync(actionUpdateDocsPath);
